@@ -3,6 +3,8 @@ package ru.netcraker.part6;
 import lombok.AllArgsConstructor;
 import lombok.ToString;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @ToString
 public class MyTriangle {
@@ -25,19 +27,23 @@ public class MyTriangle {
 	}
 
 	public String getType() {
-		Double len_v1 = v1.distance(v2);
-		Double len_v2 = v2.distance(v3);
-		Double len_v3 = v3.distance(v1);
+		BigDecimal len_v1 = new BigDecimal(v1.distance(v2));
+		BigDecimal len_v2 = new BigDecimal(v2.distance(v3));
+		BigDecimal len_v3 = new BigDecimal(v3.distance(v1));
+
 		String type = "I dont know!";
-		if (len_v1 == len_v2 && len_v2 == len_v3 && len_v3 == len_v1) {
+		if (len_v1.compareTo(len_v2) == 0
+				&& len_v2.compareTo(len_v3) == 0
+				&& len_v3.compareTo(len_v1) == 0) {
 			type = "Equilateral";
-		} else if ((len_v1 == len_v2 || len_v1 == len_v3)
-				|| (len_v2 == len_v1 || len_v2 == len_v3)
-				|| (len_v3 == len_v1 || len_v3 == len_v2)) {
+		} else if ( (len_v1.compareTo(len_v2) == 0 || len_v1.compareTo(len_v3) == 0)
+				|| (len_v2.compareTo(len_v3) == 0)
+				|| (len_v3.compareTo(len_v2) == 0) ) {
 			type = "Isosceles";
-		} else if ((len_v1 != len_v2 && len_v1 != len_v3)
-				&& (len_v2 != len_v1 && len_v2 != len_v3)
-				&& (len_v3 != len_v1 && len_v3 != len_v2)) {
+		} else if ((len_v1.compareTo(len_v2) != 0
+					&& len_v1.compareTo(len_v3) !=  0)
+				&& (len_v2.compareTo(len_v3) != 0)
+				&& (len_v3.compareTo(len_v2) != 0)) {
 			type = "Scalene";
 		}
 		return type;
