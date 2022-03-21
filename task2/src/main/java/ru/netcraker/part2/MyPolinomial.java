@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Arrays;
+import java.util.concurrent.atomic.LongAdder;
+
 @NoArgsConstructor
 @Getter
 @Setter
@@ -19,6 +22,11 @@ public class MyPolinomial {
 	public MyPolinomial(int degree) {
 		coeffs = new double[degree+1];
 		this.degree = degree;
+	}
+
+	public double evaluate(double x) {
+		var sum = Arrays.stream(coeffs).reduce(0, (r,y) -> r*x+y);
+		return sum;
 	}
 
 	public MyPolinomial add(MyPolinomial right) {

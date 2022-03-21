@@ -22,12 +22,13 @@ public class Launch {
 					 System.out.println(myComplex);
 				 },
 				 () -> {
-					 MyPolinomial myPolinomial = new MyPolinomial(1.0, 2.0);
+					 MyPolinomial myPolinomial = new MyPolinomial(1.0, 2.0, 3.0, 4.0);
 					 System.out.println("myPolinomial = " + myPolinomial);
 					 System.out.println("add: " + myPolinomial.add(
 					 		new MyPolinomial(1.0, 2.0, 3.0, 4.0)));
 					 System.out.println("multiply: " + myPolinomial.multiple(
 					 		new MyPolinomial(1.0, 2.0, 3.0)));
+					 System.out.println("value = : " + myPolinomial.evaluate(1.0));
 				 },
 				 () -> {
 					 Ball ball = new Ball(0, 0, 2, 10, -45);
