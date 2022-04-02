@@ -1,5 +1,6 @@
 package ru.netcraker.part2;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,8 +9,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.LongAdder;
 
 @NoArgsConstructor
-@Getter
-@Setter
+@Getter @Setter
+@EqualsAndHashCode
 public class MyPolinomial {
 	private double[] coeffs;
 	private int degree;

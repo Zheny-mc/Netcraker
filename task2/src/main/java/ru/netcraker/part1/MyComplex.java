@@ -6,8 +6,8 @@ import java.util.Objects;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Getter @Setter
+@EqualsAndHashCode
 public class MyComplex {
 	private Double real;
 	private Double imag;

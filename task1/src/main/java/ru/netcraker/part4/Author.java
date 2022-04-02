@@ -7,6 +7,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
 public class Author {
 	private String name;
 	private String email;

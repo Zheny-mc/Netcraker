@@ -1,9 +1,6 @@
 package ru.netcraker.part4;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -11,6 +8,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @Getter
 @ToString
+@EqualsAndHashCode
 public class Book {
 	private String name;
 	private Author[] authors;

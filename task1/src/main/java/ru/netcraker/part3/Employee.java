@@ -1,13 +1,11 @@
 package ru.netcraker.part3;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @AllArgsConstructor
 @Getter
 @ToString
+@EqualsAndHashCode
 public class Employee {
 	private int id;
 	private String firstName;

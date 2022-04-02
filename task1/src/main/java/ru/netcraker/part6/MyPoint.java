@@ -1,14 +1,11 @@
 package ru.netcraker.part6;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Getter @Setter
+@EqualsAndHashCode
 public class MyPoint {
 	private int x;
 	private int y;

@@ -1,12 +1,14 @@
 package ru.netcraker.part6;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.math.BigDecimal;
 
 @AllArgsConstructor
 @ToString
+@EqualsAndHashCode
 public class MyTriangle {
 	private MyPoint v1;
 	private MyPoint v2;

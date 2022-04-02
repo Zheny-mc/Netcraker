@@ -6,6 +6,7 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
+@EqualsAndHashCode
 public class MyPoint {
 	private int x;
 	private int y;
