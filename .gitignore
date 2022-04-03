@@ -1,0 +1,19 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+task1/.idea/
+task2/.idea/
+
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+task1/target/
+task2/target/
